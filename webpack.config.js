@@ -31,7 +31,7 @@ module.exports = [
     },
     output: {
       filename: '[name].js',
-      path: path.resolve(__dirname, './'),
+      path: path.resolve(__dirname, 'public/'),
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -39,13 +39,13 @@ module.exports = [
             template: "src/html-template/index.html",
             filename: 'index.html',
             inject: 'body',
-            path: path.resolve(__dirname, './'),// Output directory
+            path: path.resolve(__dirname, 'public/'),// Output directory
             publicPath: "/"
         }),
         new LicenseWebpackPlugin()
     ],
     devServer: {
-        static: path.resolve(__dirname, './'), // Specify the directory for serving static files
+        static: path.resolve(__dirname, 'public/'), // Specify the directory for serving static files
     },
 }
 ];
