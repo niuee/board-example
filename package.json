@@ -5,8 +5,11 @@
   },
   "private": true,
   "dependencies": {
-    "@niuee/board": "^0.0.6",
-    "@vercel/edge": "^0.1.2"
+    "@niuee/bend": "^0.0.2",
+    "@niuee/board": "^0.0.7",
+    "@niuee/bounce": "^0.0.3",
+    "@vercel/edge": "^0.1.2",
+    "point2point": "^0.0.95"
   },
   "devDependencies": {
     "css-loader": "^7.1.2",
@@ -14,6 +17,7 @@
     "html-loader": "^5.0.0",
     "html-webpack-plugin": "^5.6.0",
     "license-webpack-plugin": "^4.0.2",
+    "source-map-loader": "^5.0.0",
     "style-loader": "^4.0.0",
     "ts-loader": "^9.5.1",
     "typescript": "^5.4.5",
