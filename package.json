@@ -1,13 +1,15 @@
 {
   "scripts": {
     "start": "webpack serve --mode development",
-    "build": "pnpm exec webpack -- --mode production"
+    "build": "pnpm exec webpack -- --mode production",
+    "build:physics": "pnpm exec webpack --config physics.webpack.config.js --mode production"
   },
   "private": true,
   "dependencies": {
     "@niuee/bend": "^0.0.2",
     "@niuee/board": "^0.0.7",
-    "@niuee/bounce": "^0.0.3",
+    "@niuee/bolt": "^0.0.3",
+    "@niuee/bounce": "^0.0.4",
     "@vercel/edge": "^0.1.2",
     "point2point": "^0.0.95"
   },
@@ -21,6 +23,7 @@
     "style-loader": "^4.0.0",
     "ts-loader": "^9.5.1",
     "typescript": "^5.4.5",
+    "vite": "^5.3.3",
     "webpack": "^5.91.0",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^5.0.4",
