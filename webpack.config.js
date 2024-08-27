@@ -1,7 +1,11 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const LicenseWebpackPlugin = require('license-webpack-plugin').LicenseWebpackPlugin;
-const { merge } = require('webpack-merge');
+import path from 'path';
+
+// Add this import
+import { fileURLToPath } from 'url';
+
+// Add this line to define __dirname
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const commonConfig = {
     devServer: {
@@ -13,12 +17,9 @@ const commonConfig = {
       historyApiFallback: true, // Optional: for single-page applications
     },
 };
-const physicsConfig = require('./physics.webpack.config.js');
-const rootConfig = require('./root.webpack.config.js');
+import physicsConfig from './physics.webpack.config.js';
+import rootConfig from './root.webpack.config.js';
 
-module.exports = [
-  rootConfig,
-  physicsConfig,
-  // commonConfig,
-];
+export default [rootConfig, physicsConfig];
+
 

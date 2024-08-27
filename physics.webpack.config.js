@@ -1,9 +1,15 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const LicenseWebpackPlugin = require('license-webpack-plugin').LicenseWebpackPlugin;
+import path from 'path';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import { LicenseWebpackPlugin } from 'license-webpack-plugin';
 
+// Add this import
+import { fileURLToPath } from 'url';
 
-module.exports = 
+// Add this line to define __dirname
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+export default 
 {
     devtool: 'source-map',
     mode: "development",
