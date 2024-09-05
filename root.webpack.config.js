@@ -42,7 +42,7 @@ export default
     plugins: [
         new HtmlWebpackPlugin({
             chunks: ['index'],
-            template: "src/html-template/index.html",
+            template: "html-template/index.html",
             filename: 'index.html',
             inject: 'body',
             path: path.resolve(__dirname, 'public/'),// Output directory

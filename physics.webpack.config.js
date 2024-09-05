@@ -16,11 +16,11 @@ export default
     entry: {index: path.resolve(__dirname, './src/physics/index.ts')},
     module: {
       rules: [
-        {
-          test: /\.(m?js)$/,
-          enforce: "pre",
-          use: ["source-map-loader"],
-        },
+        // {
+        //   test: /\.(m?js)$/,
+        //   enforce: "pre",
+        //   use: ["source-map-loader"],
+        // },
         {
           test: /\.tsx?$/,
           use: 'ts-loader',
@@ -42,12 +42,12 @@ export default
     plugins: [
         new HtmlWebpackPlugin({
             chunks: ['index'],
-            template: "src/html-template/index.html",
+            template: "html-template/physics.html",
             filename: 'index.html',
             inject: 'body',
             path: path.resolve(__dirname, 'public/physics'),// Output directory
             publicPath: "/physics/"
         }),
-        new LicenseWebpackPlugin()
+        // new LicenseWebpackPlugin()
     ],
 }

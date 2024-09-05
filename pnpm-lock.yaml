@@ -15,8 +15,8 @@ importers:
         specifier: ^0.0.7
         version: 0.0.7
       '@niuee/bolt':
-        specifier: ^0.0.3
-        version: 0.0.3
+        specifier: file:../bolt/build
+        version: file:../bolt/build
       '@niuee/bounce':
         specifier: ^0.0.4
         version: 0.0.4
@@ -266,8 +266,8 @@ packages:
   '@niuee/board@0.0.7':
     resolution: {integrity: sha512-nmNIg0vY2Q1/un4lDCBGa71rpIfQ/6NL2E9eDZTugbdhp7l2tgHId5ENeMhb9CqhLkaJoXfso+IBuP7yD1py6Q==}
 
-  '@niuee/bolt@0.0.3':
-    resolution: {integrity: sha512-/YYAwjfPRCjtLjJJvei6OmNQWYLtQ0+cXsp+gsnkZAFy2KnSOdFA1uHKinn0Eg+bEkNDB8tUzPxoQpQTHQuJNw==}
+  '@niuee/bolt@file:../bolt/build':
+    resolution: {directory: ../bolt/build, type: directory}
 
   '@niuee/bounce@0.0.4':
     resolution: {integrity: sha512-HSB6lF28nZ69SJQXp0/8aGjrO3I7YXf8B7SSl72CNdWYPk2vmqTfDhxUYemxwyC4eO4ao1OUBOeYAO8WN6XE+g==}
@@ -2092,7 +2092,7 @@ snapshots:
 
   '@niuee/board@0.0.7': {}
 
-  '@niuee/bolt@0.0.3': {}
+  '@niuee/bolt@file:../bolt/build': {}
 
   '@niuee/bounce@0.0.4':
     dependencies:
