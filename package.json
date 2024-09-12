@@ -8,7 +8,7 @@
   "private": true,
   "dependencies": {
     "@niuee/bend": "^0.0.2",
-    "@niuee/board": "^0.0.7",
+    "@niuee/board": "^0.0.9",
     "@niuee/bolt": "^0.0.5",
     "@niuee/border": "^0.0.2",
     "@niuee/bounce": "^0.0.4",
@@ -20,6 +20,7 @@
     "file-loader": "^6.2.0",
     "html-loader": "^5.0.0",
     "html-webpack-plugin": "^5.6.0",
+    "json-loader": "^0.5.7",
     "license-webpack-plugin": "^4.0.2",
     "source-map-loader": "^5.0.0",
     "style-loader": "^4.0.0",

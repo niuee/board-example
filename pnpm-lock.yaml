@@ -12,8 +12,8 @@ importers:
         specifier: ^0.0.2
         version: 0.0.2
       '@niuee/board':
-        specifier: ^0.0.7
-        version: 0.0.7
+        specifier: ^0.0.9
+        version: 0.0.9
       '@niuee/bolt':
         specifier: ^0.0.5
         version: 0.0.5
@@ -42,6 +42,9 @@ importers:
       html-webpack-plugin:
         specifier: ^5.6.0
         version: 5.6.0(webpack@5.91.0(webpack-cli@5.1.4))
+      json-loader:
+        specifier: ^0.5.7
+        version: 0.5.7
       license-webpack-plugin:
         specifier: ^4.0.2
         version: 4.0.2(webpack@5.91.0(webpack-cli@5.1.4))
@@ -266,8 +269,8 @@ packages:
   '@niuee/bend@0.0.2':
     resolution: {integrity: sha512-ASItw4vy83/NkH+GmPaJcVMfkanlU+weUntt+EOT21Ll1yiXWvL9rvO+AlIdLmDB1Id9HbiK87a5pEuSU+bp5w==}
 
-  '@niuee/board@0.0.7':
-    resolution: {integrity: sha512-nmNIg0vY2Q1/un4lDCBGa71rpIfQ/6NL2E9eDZTugbdhp7l2tgHId5ENeMhb9CqhLkaJoXfso+IBuP7yD1py6Q==}
+  '@niuee/board@0.0.9':
+    resolution: {integrity: sha512-y9jWg+SnxyFkSEtI/nhx/wnuMd8nTqsbDMrYEA09UbLYjnZD7mYX/sEfMCWX4MBObi8K6AAdTmc111zfniiN7w==}
 
   '@niuee/bolt@0.0.5':
     resolution: {integrity: sha512-cczZsDDXbIRshXlUiMTCdMeNGZCNXBCdnTDAyOOOp2dBVStKOFBWjqk92gZdJ38FwUOQcmOilJv5AUsUMiw1lQ==}
@@ -1210,6 +1213,9 @@ packages:
     resolution: {integrity: sha512-7vuh85V5cdDofPyxn58nrPjBktZo0u9x1g8WtjQol+jZDaE+fhN+cIvTj11GndBnMnyfrUOG1sZQxCdjKh+DKg==}
     engines: {node: '>= 10.13.0'}
 
+  json-loader@0.5.7:
+    resolution: {integrity: sha512-QLPs8Dj7lnf3e3QYS1zkCo+4ZwqOiF9d/nZnYozTISxXWCfNs9yuky5rJw4/W34s7POaNlbZmQGaB5NiXCbP4w==}
+
   json-parse-even-better-errors@2.3.1:
     resolution: {integrity: sha512-xyFwyhro/JEof6Ghe2iz2NcXoj2sloNsWr/XsERDK/oiPCfaNhl5ONfp+jQdAZRQQ0IJWNzH9zIZF7li91kh2w==}
 
@@ -2096,7 +2102,9 @@ snapshots:
 
   '@niuee/bend@0.0.2': {}
 
-  '@niuee/board@0.0.7': {}
+  '@niuee/board@0.0.9':
+    dependencies:
+      point2point: 0.0.95
 
   '@niuee/bolt@0.0.5': {}
 
@@ -3060,6 +3068,8 @@ snapshots:
       '@types/node': 20.14.1
       merge-stream: 2.0.0
       supports-color: 8.1.1
+
+  json-loader@0.5.7: {}
 
   json-parse-even-better-errors@2.3.1: {}
 

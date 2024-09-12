@@ -1,5 +1,5 @@
 import { Board, drawAxis } from "@niuee/board";
-import mrtTrack from "../../geojsons/taipeiMRT-network.json";
+import mrtTrack from "../../geojsons/taipeiMRT-network.json" assert {type: "json"};
 import { parseParenthese, validParenthese, parseGeoCoordinate } from "../parenthesesParser";
 import { mercatorProjection } from "@niuee/border";
 

@@ -21,7 +21,8 @@ import physicsConfig from './physics.webpack.config.js';
 import rootConfig from './root.webpack.config.js';
 import handdrawingConfig from './handdrawing.webpack.config.js';
 import animationConfig from './animation.webpack.config.js';
+import geographWebpackConfig from './geograph.webpack.config.js';
 
-export default [rootConfig, physicsConfig, handdrawingConfig, animationConfig];
+export default [rootConfig, physicsConfig, handdrawingConfig, animationConfig, geographWebpackConfig];
 
 

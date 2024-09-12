@@ -38,12 +38,12 @@ type PathPoint = {
     timePercentage: number;
 }
 
-element.addEventListener('touchstart', (e)=>{
+element.addEventListener('pointerdown', (e)=>{
     isDrawing = true;
-    lastPoint = board.convertWindowPoint2WorldCoord({x: e.targetTouches[0].clientX, y: e.targetTouches[0].clientY});
+    lastPoint = board.convertWindowPoint2WorldCoord({x: e.clientX, y: e.clientY});
 });
 
-element.addEventListener('touchend', (e)=>{
+element.addEventListener('pointerup', (e)=>{
     isDrawing = false;
 });
 
@@ -51,9 +51,9 @@ element.addEventListener('touchcancel', (e)=>{
     isDrawing = false;
 });
 
-element.addEventListener('touchmove', (e)=>{
-    if(e.targetTouches.length == 1 && isDrawing){
-        let curPoint = board.convertWindowPoint2WorldCoord({x: e.targetTouches[0].clientX, y: e.targetTouches[0].clientY});
+element.addEventListener('pointermove', (e)=>{
+    if(isDrawing){
+        let curPoint = board.convertWindowPoint2WorldCoord({x: e.clientX, y: e.clientY});
         pathPoints.push({
             startPoint: {...lastPoint},
             endPoint: {...curPoint},

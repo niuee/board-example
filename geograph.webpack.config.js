@@ -9,7 +9,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const demoName = 'animation';
+const demoName = 'geograph';
 
 export default 
 {
@@ -32,19 +32,6 @@ export default
             test: /\.css$/i,
             use: ["style-loader", "css-loader"],
         },
-        // {
-        //   test: /\.json$/,
-        //   type: 'javascript/auto',
-        //   use: [
-        //     {
-        //       loader: 'file-loader',
-        //       options: {
-        //         name: '[name].[ext]',
-        //         outputPath: 'json/'
-        //       }
-        //     }
-        //   ]
-        // }
       ],
     },
     resolve: {
