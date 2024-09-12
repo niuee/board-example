@@ -82,9 +82,9 @@ function step(timestamp: number){
         ctx.strokeStyle = point.strokeStyle;
         ctx.beginPath();
         // start from
-        ctx.moveTo(point.startPoint.x, -point.startPoint.y);
+        ctx.moveTo(point.startPoint.x, point.startPoint.y);
         // go to
-        ctx.lineTo(point.endPoint.x, -point.endPoint.y);
+        ctx.lineTo(point.endPoint.x, point.endPoint.y);
         ctx.stroke();
     });
     window.requestAnimationFrame(step);

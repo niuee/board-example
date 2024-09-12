@@ -6,14 +6,26 @@ import Board from "@niuee/board/boardify";
 import { Line } from "@niuee/bend";
 import { Point } from "point2point";
 import lowWorld from "../../geojsons/low_world.json";
+import twnJSON from "../../geojsons/taiwan.json";
 
 declare var environment: string;
 
 
 type GeoJSONFeature = {
     geometry: MultiPolygon | Polygon;
-    properties: {name_zht: string};
+    properties: WorldGeoPropterties | TaiwanGeoPropterties;
     type: string;
+}
+
+type WorldGeoPropterties = {
+    name_zht: string;
+}
+//{"COUNTYID":"Z","COUNTYCODE":"09007","COUNTYNAME":"連江縣","COUNTYENG":"Lienchiang County"}
+type TaiwanGeoPropterties = {
+    COUNTYID: string;
+    COUNTYCODE: string;
+    COUNTYNAME: string;
+    COUNTYENG: string;
 }
 
 type MultiPolygon = {
@@ -32,6 +44,8 @@ type GeoJSON = {
 }
 
 const lowWorldJSON = lowWorld as GeoJSON;
+const taiwanJSON = twnJSON as GeoJSON;
+
 const worldGeoCoords: GeoCoord[][][] = lowWorldJSON.features.map((country)=>{
     if(country.geometry.type !== "MultiPolygon"){
         return country.geometry.coordinates.map((polygon)=>{
@@ -76,11 +90,11 @@ function step(timestamp: number){
             return polygon.map((coord)=>{
                 const res = orthoProjection(coord, projectionCenter);
                 return res;
-            });
+            }); 
         });
     });
     
-    const clipped = worldConvertedOrthoCoords.map((country)=>{
+    const notClipped = worldConvertedOrthoCoords.map((country)=>{
         return country.map((polygon)=>{
             const filtered = polygon.filter((coord)=>{
                 return !coord.clipped;
@@ -89,7 +103,7 @@ function step(timestamp: number){
         });
     });
     
-    clipped.forEach((country)=>{
+    notClipped.forEach((country)=>{
         country.forEach((polygon)=>{
             ctx.beginPath();
             polygon.forEach((coord, index)=>{
