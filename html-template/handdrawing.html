@@ -71,11 +71,12 @@ input:checked + .slider:before {
 }
   </style>
   <!-- Add any necessary HTML markup here -->
-    <div style="position: relative;">
-      <canvas id="test-graph" style="position: absolute; z-index: 1;" ></canvas>
-      <div style="position: absolute; left: 10vw; z-index: 2;">
+    <div style="display: flex; justify-content: center; flex-direction: column; align-items: center; height: 100vh;">
+      <canvas id="graph" width="1000" height="450" style="border: 1px solid black; background-color: white;"></canvas>
+      <div style="display: flex; justify-content: center; flex-direction: row;">
         <button id="start-recording" >開始記錄</button>
         <button id="clear-canvas-button" >清除畫布</button>
+        <button id="start-replay-btn">重播錄製的筆跡</button>
       </div>
     </div>
 
