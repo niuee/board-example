@@ -16,6 +16,6 @@
         "noImplicitAny": true,
         "baseUrl": "./",
     },
-    "include": ["src/**/*", "geojsons/*.json"],
+    "include": ["src/**/*", "geojsons/*.json", "types/**/*"],
     "exclude": ["node_modules", "**/*.test.ts", "dist", "build"]
 }
