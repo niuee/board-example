@@ -21,8 +21,8 @@ importers:
         specifier: ^0.0.2
         version: 0.0.2
       '@niuee/bounce':
-        specifier: file:../bounce/build
-        version: file:../bounce/build
+        specifier: ^0.0.4
+        version: 0.0.4
       '@vercel/edge':
         specifier: ^0.1.2
         version: 0.1.2
@@ -278,8 +278,8 @@ packages:
   '@niuee/border@0.0.2':
     resolution: {integrity: sha512-0ESN9NDHdiNwF3D0wSEe4lcbYaJqWkf+f1RfWOaTTj/Kb8Q+PpkD2AUdfqXoshi425WBknIkqUK1hJs0WD3uZw==}
 
-  '@niuee/bounce@file:../bounce/build':
-    resolution: {directory: ../bounce/build, type: directory}
+  '@niuee/bounce@0.0.4':
+    resolution: {integrity: sha512-HSB6lF28nZ69SJQXp0/8aGjrO3I7YXf8B7SSl72CNdWYPk2vmqTfDhxUYemxwyC4eO4ao1OUBOeYAO8WN6XE+g==}
 
   '@pkgjs/parseargs@0.11.0':
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
@@ -2110,7 +2110,7 @@ snapshots:
 
   '@niuee/border@0.0.2': {}
 
-  '@niuee/bounce@file:../bounce/build':
+  '@niuee/bounce@0.0.4':
     dependencies:
       point2point: 0.0.93
 
