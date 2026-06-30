@@ -34,6 +34,8 @@
   },
   "pnpm": {
     "overrides": {
+      "http-proxy-middleware": "^2.0.10",
+      "postcss": "^8.5.10",
       "launch-editor": "^2.14.1",
       "shell-quote": "^1.8.4",
       "qs": "^6.15.2",
